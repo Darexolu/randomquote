@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Button Click Counter</h1>
+    <button id="clickButton">Click me!</button>
+    <p class="countDisplay">0</p>
+    <button id="reset">Reset</button>
+
+
+
+    <script>
+        let clickMe = document.getElementById("clickButton");
+        let reset = document.getElementById("reset");
+        clickMe.addEventListener("click", counterFunction);
+        reset.addEventListener("click", resetFunction);
+
+        count = 0;
+        function counterFunction(){
+            count += 1;
+            document.getElementById("countDisplay").innerHTML = count;
+        }
+        function resetFunction(){
+            count = 0;
+            document.getElementById("countDisplay").innerHTML = count;
+        }
+    </script>
+</body>
+</html>
